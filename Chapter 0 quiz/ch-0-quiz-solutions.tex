@@ -1,0 +1,156 @@
+%--------------------------------
+% This is the part of the document that we call the preamble. 
+% It's common practice to come up with one good preamble
+% and then copy-paste it into every document that you
+% want to look mostly the same.
+%-----------------------------
+
+% Every LaTeX document begins with a \documentclass command 
+% that specifies what kind of document it is. The most common are
+% "article" and "book", and then "beamer" for presentations.
+% Google it to find out more.
+\documentclass[12pt]{article}
+
+% Then you'll generally start by loading up a bunch of packages. 
+% You can do them on individual lines like I've done here,
+% or you can be like, \usepackage{amssymb, amsmath, amsthm...}
+\usepackage{amssymb} % these three are pretty standard and provide
+\usepackage{amsmath} % a bunch of math symbols and environments.
+\usepackage{amsthm}
+\usepackage{array}
+% This next one has an option specified in square brackets 
+% before the name of the package in curly brackets.
+\usepackage[dvipsnames]{xcolor} % Good for colors, unsurprisingly.
+\usepackage{graphicx} % For including images.
+\usepackage{marvosym} % Some more symbols you might want.
+\usepackage{enumerate} % Better control of enumerate and itemize.
+\usepackage{txfonts} % Changes the font from the default (imo ugly) one.
+\usepackage{paralist} % Allows inline lists.
+\usepackage{multicol} % For multiple columns.
+% tikz is for drawing figures -- I used it for the Venn diagrams
+% and the graph of the relation. Warning: tikz is black magic.
+\usepackage{tikz}
+\usepackage{siunitx} % For quantities with units: e.g., 6 kg
+\everymath{\displaystyle} % Makes inline math display a little larger.
+% The geometry package is awesome and allows you really easy control
+% over things like margins, line spacing, tab stops, header / footer,
+% page numbers, borders, etc. etc. etc.
+\usepackage[margin=.5in]{geometry}
+\setdefaultleftmargin{0pt}{}{}{}{}{}
+\setlength{\parindent}{0pt}
+
+% You're allowed to define your own new stuff. Here's a thing I use to
+% generate an answer blank with a line under it.
+\newcommand{\mblank}{\rule[-1ex]{8ex}{0.4pt}}
+\definecolor{lightgray}{gray}{0.9}
+
+% These are for tikz: the three circles for the Venn diagrams.
+% The first coordinate is the center, in polar coordinates
+% with degrees, and the second coordinate is the radius.
+\def\firstcircle{(90:1cm) circle (1.5cm)}
+\def\secondcircle{(210:1cm) circle (1.5cm)}
+\def\thirdcircle{(330:1cm) circle (1.5cm)}
+% this is the background universe rectangle. The two sets of coordinates
+% are diagonally opposite corners.
+\def\universer{(-3, -2.5) rectangle (3, 2.75)}
+
+% You can define your own environments.
+\newenvironment{solution}
+{\color{BrickRed}\textbf{Solution.} 
+}
+{\ignorespacesafterend}
+
+% LaTeX really likes to hyphenate long words. This irritates me
+% and so I try to trick it into not doing it so much.
+\hyphenpenalty=5000
+\tolerance=1000
+
+
+%---------------------------------------------------------
+% The preamble is done. Let's start writing our document.
+% Every LaTeX document begins with a \begin{document} and
+% ends with an \end{document}. Generally these are part of
+% the template I tend to copy-paste to make a new thing.
+% --------------------------------------------------------
+\begin{document}
+	\pagestyle{empty} % This turns off the page numbers.
+	                  % I think it comes from package geometry
+	                  % but don't quote me on that.
+	\begin{center}             % \textbf{...} makes text bold. 
+	                           % See also \textit{...} for italics.
+	    {\Large\textbf{Chapter 0 Quiz}
+	    
+	    MATH 210 -- Spring 2019
+	    } %THese brackets wrap together all the text I want to be large.
+	\end{center}
+	\begin{enumerate} % Make a numbered list with enumerate. 
+	                  % Make a bullet list with itemize.
+		\item %%%%% Setbuilder notation (S1)
+		\textbf{(S1)} Suppose you have a function $f:X\to Y$. 
+		\begin{enumerate}[(a)] % You can specify what you want the counter to look like
+		                       % if you are using the enumerate package.
+			\item We said in class that if $A$ is some subset of $X$, then the \textbf{image of} $A$ \textbf{under} $f$ is the set of elements of $Y$ that are the images of elements of $A$. Write $f(A)$ in set-builder notation.
+			
+			
+			\item We said in class that if $B$ is some subset of $Y$, then the \textbf{inverse image of} $B$ \textbf{under} $f$ is the set of elements of $X$ whose images are elements of $B$. Write $f^{-1}(B)$ in set-builder notation.
+		\end{enumerate} 
+		
+		\item %%%%% Venn diagrams and stuff
+		\begin{enumerate}[(a)]
+			\item \textbf{(S2)}  Use Venn diagrams to show that 
+			$\left(A\cap \overline{C}\right) \cup \overline{\left(\overline{B} \cup C\right)} = 
+			\left(B\cap \overline{C}\right) \cup \left(A\cap \overline{B} \cap \overline{C} \right)$.
+			
+			\item This region is composed of three non-overlapping chunks. Describe each of these chunks using only $A$, $B$, $C$, their complements, and intersections.
+		\end{enumerate}
+	
+		\item %%%% 1-1 two different ways
+		\textbf{(S3)} In class we learned about several different special properties a function might have. One of them is defined in \textit{Discrete Math with Ducks} (roughly) as follows:
+		\[\forall a_1 \forall a_2 \quad f(a_1) = f(a_2) \to a_1 = a_2 \]
+		Another book defines the same property this way:
+		\[\forall x_1 \forall x_2 \quad x_1 \neq x_2 \to f(x_1) \neq f(x_2) \]
+		\begin{enumerate}[(a)]
+			\item Are these two definitions the same? Explain.
+			
+			\item Which property is it that these definitions define?
+			\end{enumerate}
+		
+		\item %%%%%%% set relations as logical connectives and quantifiers
+		\textbf{(*L1)} We have worked with many different set operations and relations whose formal definitions involve our logical connectives and quantifiers. In each of the exercises below, a set operation or relation is described followed by ``if and only if.'' Use logical connectives and quantifiers (along with any needed variable names and the element symbol $\in$) to capture the meaning of the operation or relation described.
+		
+		\begin{enumerate}[(a)]
+			\item $A$ is a subset of $B$ (that is, $A \subseteq B$) if and only if:
+			\underline{\hspace{5cm}} % This is another way to create an answer blank.
+			
+			
+			\item $A$ is a proper subset of $B$ (that is, $A \subset B$) if and only if: \underline{\hspace{5cm}}
+			
+			\item $A$ and $B$ are mutually exclusive (that is, $A \cap B = \emptyset$) if and only if:\underline{\hspace{5cm}}
+			
+		\end{enumerate}
+		
+		\item %%%%% relations
+		\textbf{(S4, S5)} Let $A=\left\{1,2,3,4,5,6\right\}$. We define relation $R$ on set $A$ as follows:
+		            % \quad makes a horizontal space that's the width of uppercase M.
+		\[(x,y) \in R \quad  \textrm{ if and only if } \quad 3 \textrm{ divides } x-y\]
+		                   % \textrm lets you insert text into math mode.
+		                             % If you use the " sign for quotes, they'll point
+		                             % the wrong way. (This is annoying.)
+		Recall, when we say one number ``divides'' another, we mean that it divides it perfectly without a remainder. 
+		
+		\begin{enumerate}[(a)]	
+			\item Draw the directed graph of relation $R$ on the set $A$.
+			
+			
+			\item Explain in your own words why $R$ is reflexive, symmetric, and transitive. 
+			
+			
+			\item If a relation on a set is reflexive, symmetric, and transitive, we call it an \textit{equivalence relation} which splits the elements of the original set into separate non-overlapping families of related elements called \textit{equivalence classes}. Can you identify these separate equivalence classes for relation $R$?
+			
+			
+			\item Why do you think the term ``equivalence relation'' is used to describe such a relation? In what ways might this term seem appropriate?
+			
+			
+		\end{enumerate}
+	\end{enumerate}
+\end{document}

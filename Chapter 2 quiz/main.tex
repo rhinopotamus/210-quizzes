@@ -1,0 +1,210 @@
+\documentclass[12pt]{article}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{mathtools}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{colortbl}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{graphicx}
+  \DeclareGraphicsRule{*}{mps}{*}{}
+%\usepackage{bbm}
+\usepackage{marvosym}
+\usepackage{enumerate}
+\usepackage{txfonts}
+\usepackage{paralist}
+\usepackage{pdfpages}
+\usepackage{multicol}
+\usepackage{tikz}
+\usepackage{centernot}
+\usepackage{siunitx}
+\usepackage[normalem]{ulem}
+\everymath{\displaystyle}
+
+\usepackage[margin=.7in]{geometry}
+%\usepackage{fullpage}
+
+\setdefaultleftmargin{0pt}{}{}{}{}{}
+
+\newcommand{\mblank}{\rule[-1ex]{8ex}{0.4pt}}
+\definecolor{lightgray}{gray}{0.7}
+
+\newenvironment{solution}
+{\color{BrickRed}\textbf{Solution.} 
+}
+{\ignorespacesafterend}
+
+% Circles for Venn diagrams
+\def\firstcircle{(90:1cm) circle (1.5cm)}
+\def\secondcircle{(210:1cm) circle (1.5cm)}
+\def\thirdcircle{(330:1cm) circle (1.5cm)}
+% And here's the background rectangle
+\def\universer{(-3, -2.5) rectangle (3, 2.75)}
+
+
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+
+\hyphenpenalty=5000
+\tolerance=1000
+\setlength{\parindent}{0pt}
+
+\begin{document}
+\pagestyle{empty}
+\begin{center}
+\section*{MATH 210 -- Chapter 2 quiz}
+\end{center}
+
+\begin{enumerate}
+
+
+
+
+\item
+\textbf{(S4)} Given a relation R on set A, here are the definitions of the symmetric and antisymmetric properties:
+
+R is \textbf{symmetric} if and only if
+
+        \[\forall x \in A\ \forall y \in A, xRy \rightarrow yRx \]
+
+R is \textbf{antisymmetric} if and only if 
+
+		\[\forall x \in A\ \forall y \in A, (xRy \land yRx) \rightarrow x = y \]
+
+\begin{enumerate}
+    \item Can a relation be neither symmetric nor antisymmetric? If yes, find an example. If no, explain why not.
+    \item Can a relation be both symmetric and antisymmetric? If yes, find an example. If no, explain why not.
+\end{enumerate}	
+
+\item (\textbf{P3}) Construct a \textbf{combinatorial} proof of the following binomial identity: 
+\[\binom{n}{k} = \binom{n-1}{k-1} + \binom{n-1}{k}\]
+(\textbf{Note:} A purely algebraic proof won't count here.)
+
+\item Suppose that $A$ and $B$ are some sets with $|A| = 10$ and $|B| = 5$.
+\begin{enumerate}[(a)]
+    \item (\textbf{C2}) How many functions $f:A\to B$ are surjective? (\textbf{Hint:} Whoever answers this question deserves a pie. You might think about how a function can fail to be surjective.)
+    \item (\textbf{C3}) Carefully explain why the counting strategies you used in your answer are the correct ones to use.
+    
+    \item (\textbf{S3}) How many functions $g:B \to A$ are surjective? Carefully explain why your answer makes sense.
+    
+\end{enumerate}
+
+\item (\textbf{C1, C3}) Our class consists of 24 individuals. 
+\begin{enumerate}
+    \item How many ways can an entertainment committee of three individuals be selected? Carefully explain why the counting strategy you used is correct.
+    
+    \item How many ways can an entertainment committee of three individuals be selected if one of the committee members must be the chairperson? Carefully explain why the counting strategy you used is correct.
+    
+    \item How many ways can a President, Vice President, and Treasurer be selected? Carefully explain why the counting strategy you used is correct.
+    
+ \end{enumerate}
+
+\item Consider the recurrence relation $a_n = 2a_{n-1} + 8a_{n-2}$, with initial terms $a_0 = 1$ and $a_1 = 3$. 
+\begin{enumerate}
+    \item (\textbf{Q1}) Find the next five terms of this sequence.
+    
+    \item (\textbf{Q2}) Find a closed formula for the $n$th term of the sequence.
+    
+\end{enumerate}
+
+
+\item (\textbf{P4}) Prove using mathematical induction that $1^3 + 2^3 + 3^3 + \ldots + n^3 = \left(\frac{n(n+1)}{2}\right)^2$ for all natural numbers $n \geq 1$.
+
+
+\item (\textbf{P4}) Prove using mathematical induction that every set containing $n$ elements has $2^n$ subsets for any natural number $n \geq 1$.
+
+
+\item (\textbf{Q1, Q2}) Let $a_n$ be the number of $n$-trains you can make using length-1 tiles available in 4 colors and length-2 dominos available in 5 colors.
+\begin{enumerate}
+    \item First, find a recurrence relation to describe the problem. Carefully explain why your recurrence relation is correct, in the context of the problem.
+    
+    \item Write out the first 6 terms of the sequence $a_1$, $a_2$, \ldots.
+    
+    \item Solve the recurrence relation to find a closed formula for $a_n$.
+    
+\end{enumerate}
+
+
+\item (\textbf{L2}) DeMorgan's Rule describes how to negate ``\textbf{and}'' statements. Use a truth table to show that  $\lnot(P \land Q)$ is logically equivalent to  $\lnot P \lor \lnot Q$.  Carefully explain \textbf{why} your truth table shows that we're right.
+
+
+\item (\textbf{S2}) You are hosting a party for 50 people. As a conscientious host, you've carefully asked all of your attendees what they are allergic to: shellfish (S), peanuts (P), and/or broccoli (B). Here are the results:
+
+\begin{tabular}{l|ccccccc}
+Allergen & S  & P  & B  & Both S and P & Both S and B & Both P and B & S, P, and B \\\hline
+Number   & 14 & 12 & 12 & 4            & 5            & 3            & 1
+\end{tabular}
+
+How many of your 50 guests are \textbf{not} allergic to anything?
+
+
+\item Consider this statement: ``For every natural number $n$, there is some natural number that is smaller.''
+\begin{enumerate}
+    \item (\textbf{L1}) Translate this statement into mathematical symbols, using correct quantifiers and connectives. 
+    
+    \item (\textbf{L3}) Negate your translated mathematical statement. Simplify as much as possible.
+    
+    \item (\textbf{L1}) Translate your negated statement back into English words -- no mathematical symbols allowed.
+    
+    \item (\textbf{P2}) The original statement turns out to be false. Give a careful proof.
+    
+\end{enumerate}
+
+
+\item (\textbf{S5}) A group of dogs meet at the park. They organize into friendly gangs which we will call equivalence classes. Here are the equivalence classes as a set. 
+
+\{\{Apollo, Dave\}, \{Bandit, Sheila, Raz\}, \{Pinky\}, \{Sprocket\}\} 
+
+Draw the directed graph corresponding to these equivalence classes showing all directed edges.
+
+
+\item (\textbf{S1})
+Here are two sets, $A$ and $B$, written in set-builder notation. 
+
+$A=\{x: (x-3)(x-2)(x-1)=0\}$ \\
+$B=\{x \in \mathbb{N}: \exists m \in \mathbb{N}, x\cdot m=6\}$
+
+Which of the following, if any, are true: $A \subset B, B \subset A, A=B$. Explain your answer.
+
+
+\item (\textbf{P1}) 
+The following claim, which we haven't yet proved, has come up in a couple of different Proof Portfolio attempts: ``For all natural numbers $n$, if $n^2$ is odd, then $n$ is odd.'' Prove this claim!
+
+
+
+\item (\textbf{P5})
+Remember, an L-tromino is a shape consisting of three equal squares joined at the edges to form a shape resembling the capital letter L. 
+
+Consider the following ``theorem'': 
+
+\begin{verse}
+\textit{``Theorem''}: For any integer $n \geq 1$, if one square is removed from a $2 \cdot 2^{n} \times 3 \cdot 2^{n}$ checkerboard, the remaining squares can be completely covered by L-shaped trominoes. 
+\end{verse}
+
+What follows is a supposed proof. Your job is to critique the proof by explaining what is wrong with it:
+
+\begin{verse}
+\textit{``Proof''}:
+
+We prove the theorem by mathematical induction. \\ 
+Assume it is true for $k$ that a $2 \cdot 2^{k} \times 3 \cdot 2^{k}$ checkerboard with one square missing can be completely covered by L-shaped trominoes. 
+
+We will show this implies it is true for $k+1$ that a $2 \cdot 2^{k+1} \times 3 \cdot 2^{k+1}$ checkerboard with one square missing can be completely covered by L-shaped trominoes.
+
+Note that a $2 \cdot 2^{k+1} \times 3 \cdot 2^{k+1}$ can be split into four quadrants, each one a $2 \cdot 2^{k} \times 3 \cdot 2^{k}$ checkerboard.
+
+The missing square on the $2 \cdot 2^{k+1} \times 3 \cdot 2^{k+1}$ checkerboard must occur in one of these four quadrants. 
+
+By the induction assumption, this quadrant, which is of size $2 \cdot 2^{k} \times 3 \cdot 2^{k}$ and missing one square, can be completely covered by L-shaped trominoes. 
+
+Now, place one tromino at the intersection point so that it covers one square from each of the other three quadrants. 
+
+These three quadrants are each of size $2 \cdot 2^{k} \times 3 \cdot 2^{k}$ and missing one square. Thus, by the induction assumption, they can be completely covered with L-shaped trominoes. 
+
+Therefore, we have shown that the entire $2 \cdot 2^{k+1} \times 3 \cdot 2^{k+1}$ checkerboard with one missing square can be completely covered by L-shaped trominoes. 
+
+Hence, we have proved our theorem by mathematical induction. QED, bro!
+\end{verse}
+
+\end{enumerate}
+\end{document}

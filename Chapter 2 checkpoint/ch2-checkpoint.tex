@@ -1,0 +1,240 @@
+\input{../header}
+\usepackage{parskip}
+\usepackage{tabularx}
+\everymath{\displaystyle}
+\rhead{Your name: \rule{8cm}{0.15mm}}
+
+\begin{document}
+%
+
+
+%\onehalfspacing
+\allowdisplaybreaks
+%##################################################################
+\section{Chapter 1 checkpoint!}
+
+Hello and welcome to your first checkpoint! Here come six questions, one about each of the learning targets from Chapter 1. This is your scorecard:
+
+\begin{center}
+    \begin{tabular}{|m{3.75cm}|*{6}{m{1.75cm}|}} \hline
+        Learning target: & P1 & P2 & L1 & L2 & L3 & L4 \\\hline
+        Your confidence level before starting (0-5): & &&&&&\\\hline
+        Your confidence level after the quiz (0-5): & &&&&&\\\hline
+        The mark you earned on this attempt: 
+        & Success! \newline Revise! \newline Try again!
+        & Success! \newline Revise! \newline Try again!
+        & Success! \newline Revise! \newline Try again!
+        & Success! \newline Revise! \newline Try again!
+        & Success! \newline Revise! \newline Try again!
+        & Success! \newline Revise! \newline Try again! \\\hline
+
+    \end{tabular}
+\end{center}
+
+Before anything else, please do the following:
+\begin{itemize}
+    \item Rank your confidence from 0-5 on each of the learning targets. 5 means ``I could teach a whole class about this;'' 0 means ``I am genuinely not sure I have heard these words before.''
+    \item Rip all the pages apart.
+    \item Write your name on this page and on each of the other pages of the quiz.
+\end{itemize}
+
+Then do the quiz! Some reminders:
+\begin{itemize}
+    \item Open notes, closed computer.
+    \item If you need more room to write, use the back of the same learning target page, or ask me for some scratch paper.
+    \item Read the questions carefully and make sure you're answering each part.
+    \item Show all your work and explain all your thinking!
+\end{itemize}
+
+When you are done:
+\begin{itemize}
+    \item Rank your confidence from 0-5 on each of the learning targets. 5 means ``I absolutely nailed that question for sure;'' 0 means ``oof, I definitely didn't get that one.''
+    \item Make double sure your name is on every page, including any scratch paper.
+    \item Hand in your work, separated by learning target.
+\end{itemize}
+
+Have fun and do your best! I believe in u $\heartsuit$
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagebreak
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Learning target P1, version 1}
+Consider the following proposition:
+
+For all natural numbers $n$, if $n^{2}$ is even, then $n$ is even. 
+
+Is the following claimed proof valid? Use Toulmin analysis to decide.
+
+\hrulefill
+
+    \begin{proof} Consider any $n \in \mathbb{N}$. Assume that $n^{2}$ is even. 
+    
+    By definition, $n^{2} = 2k$ for some $k \in \mathbb{N}$.
+    
+    Let's take square roots of each side giving us $\sqrt{n^{2}}=\sqrt{2k}$. 
+    
+    Simplifying, $n=\sqrt{2k}$.  
+    
+    Multiplying by $2$ top and bottom inside the square root, $n=\sqrt{\frac{2\cdot 2k}{2}}$. 
+    
+    So, $n=\sqrt{\frac{4\cdot k}{2}}$.  
+    
+    Pulling $4$ out of the square root, $n=2\cdot\sqrt{\frac{k}{2}}$.
+    
+    Let $m=\sqrt{\frac{k}{2}}$.
+    
+    Thus $n=2m$.
+    
+    Therefore, $n$ is an even number.
+    
+    So, our theorem is proved.
+    \end{proof}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagebreak
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Learning target P2, version 1}
+
+The following definitions are extremely made up and don't mean anything (but they look fun!).
+
+\textbf{Definition}: A function is \textit{viscous} if its geodesic curvature $\gamma(f)$ is nonzero.
+
+\textbf{Definition}: A function is \textit{laminar} if its intrinsic cofunction $\tilde{f}$ is differentiable.
+
+Consider the following proposition: Every laminar function is viscous.
+
+\begin{enumerate}[leftmargin=0pt]
+    \item Write a proof framework for a \textit{direct} proof of this proposition.
+    \vfill
+    \item Write a proof framework for a \textit{proof by contrapositive.}
+    \vfill
+    \item Write a proof framework for a \textit{proof by contradiction.}
+    \vfill
+    \item (Bonus!) If for some reason you did not believe this proposition was true (and thus that none of these proof frameworks is appropriate), how would you show it?
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagebreak
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Learning target L1, version 1}
+
+Consider these two very similar-looking statements: 
+
+$\exists x\in \mathbb{Z}\ \forall y \in \mathbb{Z}, x + y = 0$
+
+$\forall y \in \mathbb{Z}\ \exists x\in \mathbb{Z}, x + y = 0$
+
+\begin{enumerate}
+    \item Translate both statements into human words.
+    \vfill
+    \item Precisely one of these two statements is true. Which is it, and why?\\ (Moral: the order of quantifiers is super important.)
+    \vfill
+    \item (Bonus!) If $\mathbb{Z}$ is replaced by $\mathbb{N}$, is this statement still true?
+\end{enumerate}
+
+\iffalse
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagebreak
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Learning target L1, version 0}
+
+Okay, so here's the real definition of a function: A \textbf{function} $f:X\to Y$ is a rule that assigns each input exactly one output. \textbf{Inputs} are elements of the \textbf{domain} $X$, and \textbf{outputs} are elements of the \textbf{codomain} $Y$.
+
+\begin{enumerate}
+    \item Write the definition of a function in logical symbols with proper quantifiers.
+    \vfill
+    \item An \textbf{injective} function (also called \textbf{one-to-one}) assigns each output to exactly one input. Translate that to properly quantified logical symbols.
+    \vfill
+    \item A \textbf{surjective} function (also called \textbf{onto}) assigns an input to every possible output. Logical symbols for this?
+    \vfill
+\end{enumerate}
+\fi
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagebreak
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Learning target L2, version 1}
+
+Write each of the following statements in ``if\ldots, then \ldots'' form. (Note that some of them are true and some of them are not.)
+
+\begin{enumerate}
+    \item Every continuous function is differentiable. \vfill
+    \item A shape is a square only if it is a rectangle. \vfill
+    \item Cooking is necessary for eating salmon. \vfill
+    \item All dogs go to heaven. \vfill
+    \item (The converse of ``all dogs go to heaven''.) \vfill
+    \item (The inverse of ``all dogs go to heaven''.) \vfill
+    \item (The contrapositive of ``all dogs go to heaven''.) \vfill
+    
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagebreak
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Learning target L3, version 1}
+
+Simplify each of the following:
+
+\begin{enumerate}
+    \item $\lnot(P\to Q)$ \vfill
+    \item The negation of the \textbf{converse} of $P\to Q$\vfill
+    \item $\lnot((P\to Q) \lor (Q\to P))$\vfill
+    \item $\neg \exists x \forall y (\neg O(x) \vee E(y))\text{.}$\vfill
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagebreak
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Learning target L4, version 1}
+
+I wonder how the implication sign distributes over the logical connectives $\lor$ and $\land$.
+
+\begin{enumerate}
+    \item Are the statements $P \to (Q\lor R)$ and $(P\to Q) \lor (P \to R)$ logically equivalent? \\
+    Use a truth table to decide.
+    \vfill
+    \item What about the statements $P \to (Q\land R)$ and $(P\to Q) \land (P \to R)$? Make another truth table.
+    \vfill
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagebreak
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Learning target G1, version 1}
+Fill in the blank boxes.
+
+{\newcolumntype{Y}{>{\centering\arraybackslash}X}
+\begin{tabularx}{\textwidth}{Y|Y|Y}
+    Adjacency table & Vertex set and edge set & Drawing \\\hline
+    {\begin{tabularx}{\linewidth}{r|l}
+        \textbf{vertex} & \textbf{adjacent to} \\\hline
+        $a$ & $b$, $d$\\
+        $b$ & $a$, $c$, $d$, $e$, $f$\\
+        $c$ & $b$, $g$ \\
+        $d$ & $a$, $b$, $e$ \\
+        $e$ & $b$, $d$, $f$ \\
+        $f$ & $b$, $e$, $g$ \\
+        $g$ & $c$, $f$
+    \end{tabularx}} & & \\
+\end{tabularx}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagebreak
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Learning target G2, version 1}
+Two of the graphs on the previous page are isomorphic.
+\begin{enumerate}
+    \item Figure out which two,
+    \item provide a relabeling between them,
+    \item and convince me that the relabeling respects the edges.
+\end{enumerate}
+
+\iffalse
+<Graph indexType="custom" height="400" width="400" nodes={[{label:"dog",center:{x:141.2,y:180.2}},{label:"cat",center:{x:274.8,y:335.8}},{label:"cow",center:{x:206,y:332.9}},{label:"bear",center:{x:257.2,y:140}},{label:"fish",center:{x:332.2,y:233.6}},{label:"bird",center:{x:143.4,y:283.5}}]} edges={[{source:1,target:3},{source:0,target:3},{source:3,target:4},{source:1,target:4},{source:0,target:4},{source:0,target:5},{source:5,target:2},{source:5,target:3},{source:5,target:4}]} />
+\fi
+
+\iffalse
+<Graph indexType="custom" height="400" width="400" nodes={[{label:"A",center:{x:178.2,y:78.3}},{label:"B",center:{x:166.2,y:185}},{label:"C",center:{x:296.2,y:225.6}},{label:"D",center:{x:218.1,y:172.2}},{label:"E",center:{x:104.9,y:270.2}},{label:"F",center:{x:198,y:209.7}}]} edges={[{source:0,target:2},{source:2,target:3},{source:0,target:4},{source:1,target:4},{source:2,target:4},{source:0,target:5},{source:1,target:5},{source:4,target:5},{source:2,target:5}]} />
+\fi
+
+\end{document}

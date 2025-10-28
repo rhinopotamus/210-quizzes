@@ -4,6 +4,9 @@
 \everymath{\displaystyle}
 \rhead{Your name: \rule{8cm}{0.15mm}}
 
+\newcommand{\vtx}[2]{node[fill,circle,inner sep=0pt, minimum size=7pt,label=#1:#2]{}} 
+\renewcommand{\v}{\vtx{above}{}} 
+
 \begin{document}
 %
 
@@ -11,9 +14,9 @@
 %\onehalfspacing
 \allowdisplaybreaks
 %##################################################################
-\section{Chapter 1 checkpoint!}
+\section{Chapter 2 checkpoint!}
 
-Hello and welcome to your first checkpoint! Here come six questions, one about each of the learning targets from Chapter 1. This is your scorecard:
+Scorecard!
 
 \begin{center}
     \begin{tabular}{|m{3.75cm}|*{6}{m{1.75cm}|}} \hline
@@ -27,6 +30,16 @@ Hello and welcome to your first checkpoint! Here come six questions, one about e
         & Success! \newline Revise! \newline Try again!
         & Success! \newline Revise! \newline Try again!
         & Success! \newline Revise! \newline Try again! \\\hline
+        &&&&&&\\\hline
+        Learning target: & G1 & G2 & G3 & G4 &  & \\\hline
+        Your confidence level before starting (0-5): & &&&&&\\\hline
+        Your confidence level after the quiz (0-5): & &&&&&\\\hline
+        The mark you earned on this attempt: 
+        & Success! \newline Revise! \newline Try again!
+        & Success! \newline Revise! \newline Try again!
+        & Success! \newline Revise! \newline Try again!
+        & Success! \newline Revise! \newline Try again! 
+        & & \\\hline
 
     \end{tabular}
 \end{center}
@@ -55,153 +68,32 @@ When you are done:
 
 Have fun and do your best! I believe in u $\heartsuit$
 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\pagebreak
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Learning target P1, version 1}
-Consider the following proposition:
-
-For all natural numbers $n$, if $n^{2}$ is even, then $n$ is even. 
-
-Is the following claimed proof valid? Use Toulmin analysis to decide.
-
-\hrulefill
-
-    \begin{proof} Consider any $n \in \mathbb{N}$. Assume that $n^{2}$ is even. 
-    
-    By definition, $n^{2} = 2k$ for some $k \in \mathbb{N}$.
-    
-    Let's take square roots of each side giving us $\sqrt{n^{2}}=\sqrt{2k}$. 
-    
-    Simplifying, $n=\sqrt{2k}$.  
-    
-    Multiplying by $2$ top and bottom inside the square root, $n=\sqrt{\frac{2\cdot 2k}{2}}$. 
-    
-    So, $n=\sqrt{\frac{4\cdot k}{2}}$.  
-    
-    Pulling $4$ out of the square root, $n=2\cdot\sqrt{\frac{k}{2}}$.
-    
-    Let $m=\sqrt{\frac{k}{2}}$.
-    
-    Thus $n=2m$.
-    
-    Therefore, $n$ is an even number.
-    
-    So, our theorem is proved.
-    \end{proof}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\pagebreak
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Learning target P2, version 1}
-
-The following definitions are extremely made up and don't mean anything (but they look fun!).
-
-\textbf{Definition}: A function is \textit{viscous} if its geodesic curvature $\gamma(f)$ is nonzero.
-
-\textbf{Definition}: A function is \textit{laminar} if its intrinsic cofunction $\tilde{f}$ is differentiable.
-
-Consider the following proposition: Every laminar function is viscous.
-
-\begin{enumerate}[leftmargin=0pt]
-    \item Write a proof framework for a \textit{direct} proof of this proposition.
-    \vfill
-    \item Write a proof framework for a \textit{proof by contrapositive.}
-    \vfill
-    \item Write a proof framework for a \textit{proof by contradiction.}
-    \vfill
-    \item (Bonus!) If for some reason you did not believe this proposition was true (and thus that none of these proof frameworks is appropriate), how would you show it?
-\end{enumerate}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\pagebreak
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Learning target L1, version 1}
-
-Consider these two very similar-looking statements: 
-
-$\exists x\in \mathbb{Z}\ \forall y \in \mathbb{Z}, x + y = 0$
-
-$\forall y \in \mathbb{Z}\ \exists x\in \mathbb{Z}, x + y = 0$
-
-\begin{enumerate}
-    \item Translate both statements into human words.
-    \vfill
-    \item Precisely one of these two statements is true. Which is it, and why?\\ (Moral: the order of quantifiers is super important.)
-    \vfill
-    \item (Bonus!) If $\mathbb{Z}$ is replaced by $\mathbb{N}$, is this statement still true?
-\end{enumerate}
-
-\iffalse
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\pagebreak
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Learning target L1, version 0}
-
-Okay, so here's the real definition of a function: A \textbf{function} $f:X\to Y$ is a rule that assigns each input exactly one output. \textbf{Inputs} are elements of the \textbf{domain} $X$, and \textbf{outputs} are elements of the \textbf{codomain} $Y$.
-
-\begin{enumerate}
-    \item Write the definition of a function in logical symbols with proper quantifiers.
-    \vfill
-    \item An \textbf{injective} function (also called \textbf{one-to-one}) assigns each output to exactly one input. Translate that to properly quantified logical symbols.
-    \vfill
-    \item A \textbf{surjective} function (also called \textbf{onto}) assigns an input to every possible output. Logical symbols for this?
-    \vfill
-\end{enumerate}
-\fi
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\pagebreak
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Learning target L2, version 1}
-
-Write each of the following statements in ``if\ldots, then \ldots'' form. (Note that some of them are true and some of them are not.)
-
-\begin{enumerate}
-    \item Every continuous function is differentiable. \vfill
-    \item A shape is a square only if it is a rectangle. \vfill
-    \item Cooking is necessary for eating salmon. \vfill
-    \item All dogs go to heaven. \vfill
-    \item (The converse of ``all dogs go to heaven''.) \vfill
-    \item (The inverse of ``all dogs go to heaven''.) \vfill
-    \item (The contrapositive of ``all dogs go to heaven''.) \vfill
-    
-\end{enumerate}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\pagebreak
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Learning target L3, version 1}
-
-Simplify each of the following:
-
-\begin{enumerate}
-    \item $\lnot(P\to Q)$ \vfill
-    \item The negation of the \textbf{converse} of $P\to Q$\vfill
-    \item $\lnot((P\to Q) \lor (Q\to P))$\vfill
-    \item $\neg \exists x \forall y (\neg O(x) \vee E(y))\text{.}$\vfill
-\end{enumerate}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\pagebreak
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Learning target L4, version 1}
-
-I wonder how the implication sign distributes over the logical connectives $\lor$ and $\land$.
-
-\begin{enumerate}
-    \item Are the statements $P \to (Q\lor R)$ and $(P\to Q) \lor (P \to R)$ logically equivalent? \\
-    Use a truth table to decide.
-    \vfill
-    \item What about the statements $P \to (Q\land R)$ and $(P\to Q) \land (P \to R)$? Make another truth table.
-    \vfill
-\end{enumerate}
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \pagebreak
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Learning target G1, version 1}
-Fill in the blank boxes.
 
+\begin{enumerate}
+    \item Use the vertex set $V$ and edge set $E$ below to draw a picture of the graph $G = (V, E)$.
+    \begin{align*}
+        V = \{&a, b, c, d, e, f, g\} \\
+        E = \{& \{a, b\}, \{a, d\}, \\
+              & \{b, c\}, \{b,d\}, \{b, e\}, \{b, f\}, \\
+              & \{c, g\}, 
+                \{d, e\}, 
+                \{e, f\}, 
+                \{f, g\}
+            \}        
+    \end{align*}
+
+    \vfill
+
+    \item Write down the edge set and vertex set of the graph $H$ drawn below:
+
+    \includegraphics[width=0.6\textwidth]{G1-H-v1.png}
+\end{enumerate}
+
+\iffalse
 {\newcolumntype{Y}{>{\centering\arraybackslash}X}
 \begin{tabularx}{\textwidth}{Y|Y|Y}
     Adjacency table & Vertex set and edge set & Drawing \\\hline
@@ -217,17 +109,115 @@ Fill in the blank boxes.
     \end{tabularx}} & & \\
 \end{tabularx}
 }
+\fi
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \pagebreak
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Learning target G2, version 1}
-Two of the graphs on the previous page are isomorphic.
+Are the graphs $G$ and $H$ on the previous page isomorphic? 
+\begin{itemize}
+    \item If so, give a relabeling, and convince me that it respects the edges.
+    \item If not, carefully explain how you know for sure.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagebreak
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Learning target G3, version 1}
+
 \begin{enumerate}
-    \item Figure out which two,
-    \item provide a relabeling between them,
-    \item and convince me that the relabeling respects the edges.
+    \item Draw a tree in which the highest degree is 4.
+    
+    \vfill
+    \item Draw a subgraph of $K_{3,3}$.
+
+    \vfill
+    \item Does the graph $G$ below have an Euler trail? If so, draw it; if not, explain how you know.
+    \begin{tikzpicture}[scale=1.75]
+        \foreach \x in {0,...,4}{
+            \draw (0,0) \v -- (90+\x*72:1) \v -- (162+\x*72:2) \v -- (90+\x*72:2) -- (162+\x*72:1);
+        }
+    \end{tikzpicture}
+    \item Based on the drawing of the graph $G$ above, can you conclude whether or not $G$ is planar? Why or why not?
 \end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagebreak
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Learning target G3, version 1}
+\begin{enumerate}
+    \item Find the chromatic number of the graph below, and show me a proper coloring.
+    \begin{center}
+        \begin{tikzpicture}[scale=2]
+            \foreach \x in {0,...,4}{
+                \draw (0,0) \v -- (90+\x*72:1) \v -- (162+\x*72:2) \v -- (90+\x*72:2) -- (162+\x*72:1);
+            }
+        \end{tikzpicture}
+    \end{center}
+    \item Prove that you're right. (That is, give a convincing reason why the chromatic number isn't \textit{less} than the number of colors you used.)
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagebreak
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Learning target P2, version 2}
+This is true: If $G'$ is a subgraph of a bipartite graph $G$, then $G'$ is bipartite.
+\begin{enumerate}[leftmargin=0pt]
+    \item Write a framework for a direct proof.
+    \vfill
+    \item Write a framework for a proof by contrapositive.
+    \vfill
+    \item Write a framework for a proof by contradiction.
+    \vfill
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagebreak
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Learning target P1, version 2}
+Prove that if $G'$ is a subgraph of a bipartite graph $G$, then $G'$ is bipartite.
+
+Use one of your frameworks from the P2 problem.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagebreak
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Learning target L1 / L2 / L3, version 2}
+Consider the following statement: Every tree is planar.
+\begin{enumerate}
+    \item[\textbf{L1}.] Translate this into ``if-then'' form in human language:
+
+    \vspace{2cm}
+    and then translate your human ``if-then'' version into properly quantified symbols.
+
+    \vspace{2cm}
+    \item[\textbf{L2}.] Write the contrapositive, converse, and inverse of this statement in human words.
+
+    Contrapositive:
+
+    \vspace{2cm}
+    Inverse:
+
+    \vspace{2cm}
+    Converse:
+
+    \vspace{2cm}
+    \item[\textbf{L3}.] Write the negation of the original statement in symbols, and translate it into human words.
+    
+    \vfill
+    \item[\textbf{Bonus}:] Prove or disprove this statement. Use the back of this page.
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagebreak
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Learning target L4, version 2}
+Are the two compound logical statements below logically equivalent or not? Include a truth table and a clear explanation.
+\[
+(P \land Q) \rightarrow R \hspace{40pt} \lnot P \lor \lnot Q \lor R
+\]
+
 
 \iffalse
 <Graph indexType="custom" height="400" width="400" nodes={[{label:"dog",center:{x:141.2,y:180.2}},{label:"cat",center:{x:274.8,y:335.8}},{label:"cow",center:{x:206,y:332.9}},{label:"bear",center:{x:257.2,y:140}},{label:"fish",center:{x:332.2,y:233.6}},{label:"bird",center:{x:143.4,y:283.5}}]} edges={[{source:1,target:3},{source:0,target:3},{source:3,target:4},{source:1,target:4},{source:0,target:4},{source:0,target:5},{source:5,target:2},{source:5,target:3},{source:5,target:4}]} />

@@ -1,0 +1,203 @@
+\input{../header}
+\usepackage{parskip}
+\usepackage{tabularx}
+\everymath{\displaystyle}
+\rhead{Your name: \rule{8cm}{0.15mm}}
+
+\newcommand{\vtx}[2]{node[fill,circle,inner sep=0pt, minimum size=7pt,label=#1:#2]{}} 
+\renewcommand{\v}{\vtx{above}{}} 
+
+\begin{document}
+%
+
+
+%\onehalfspacing
+\allowdisplaybreaks
+%##################################################################
+\section{Final checkpoint!}
+
+Scorecard!
+
+\begin{center}
+    \begin{tabular}{|m{3.75cm}|*{6}{m{1.75cm}|}} \hline
+        Learning target: & P1 & P2 & L1 & L2 & L3 & L4 \\\hline
+        Your confidence level before starting (0-5): & &&&&&\\\hline
+        Your confidence level after the quiz (0-5): & &&&&&\\\hline
+        The mark you earned on this attempt: 
+        & Success! \newline Try again!
+        & Success! \newline Try again!
+        & Success! \newline Try again!
+        & Success! \newline Try again!
+        & Success! \newline Try again!
+        & Success! \newline Try again! \\\hline
+        &&&&&&\\\hline
+        Learning target: & G1 & G2 & G3 & G4 &  & \\\hline
+        Your confidence level before starting (0-5): & &&&&&\\\hline
+        Your confidence level after the quiz (0-5): & &&&&&\\\hline
+        The mark you earned on this attempt: 
+        & Success! \newline Try again!
+        & Success! \newline Try again!
+        & Success! \newline Try again!
+        & Success! \newline Try again! 
+        & & \\\hline
+        &&&&&&\\\hline
+        Learning target: & C1 & C2 & C3 & C4 & Q1 & Q3 \\\hline
+        Your confidence level before starting (0-5): & &&&&&\\\hline
+        Your confidence level after the quiz (0-5): & &&&&&\\\hline
+        The mark you earned on this attempt: 
+        & Success! \newline Try again!
+        & Success! \newline Try again!
+        & Success! \newline Try again!
+        & Success! \newline Try again! 
+        & Success! \newline Try again!
+        & Success! \newline Try again! \\\hline
+
+    \end{tabular}
+\end{center}
+
+
+Have fun and do your best! I believe in u $\heartsuit$
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagebreak
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Learning target C1 and C3, version 1} % misc counting
+
+Answer each of the counting questions on this page. Explain why your approach is correct.
+
+\begin{enumerate}[(a)]
+	\item  How many different bags of 20 Skittles are possible, assuming we care about how many of each of the 5 ``flavors'' are in the bag?
+	
+		%${24 \choose 4}$. Sticks and stones with 20 stones and 4 sticks.
+	
+	\vfill
+	\item  How many stacks of 9 coins are possible, using pennies, nickels, dimes, and quarters?
+	
+		% $4^9$.  You can choose one of 4 coin types in each of the 9 positions.
+	
+	\vfill
+	\item  How many bit strings of length 12 have weight either 5 or 6?
+	
+		%${12 \choose 5} + {12 \choose 6}$ (there is no way for a bit string to have both).
+	
+	\vfill
+	\item  How many 5-letter words can you make from the letters $\{a, b, c, d, e, f, g\}$ without using any letter more than once?
+	
+		%$P(7,5) = 7 \cdot 6 \cdot \cdots \cdot 3$.  There are 7 choices for the first letter, 6 for the second, and so on.
+	
+	\vfill
+	\item  How many ways are there to divide 15 people into ``red team,'' ``blue team,'' and ``green team,'' so that each team has 5 people?
+	
+		%${15 \choose 5}{10 \choose 5}{5 \choose 5}$
+	
+	\vfill
+
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagebreak
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Learning target C2, version 1} % PIE
+
+You are hosting a party for 50 people. As a conscientious host, you've asked all of your guests what they are allergic to: shellfish (S), peanuts (P), and/or broccoli (B). Here are the results:
+
+\begin{tabular}{l|ccccccc}
+Allergen & S  & P  & B  & Both S and P & Both S and B & Both P and B & S, P, and B \\\hline
+Number   & 14 & 12 & 12 & 4            & 5            & 3            & 1
+\end{tabular}
+
+How many of your 50 guests are \textbf{not} allergic to anything?
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagebreak
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Learning target C4, version 1} % Combinatorial proof
+
+Give a \textit{combinatorial} proof of the fact that each row of Pascal's triangle adds up to a power of 2:
+\[\binom{n}{0} + \binom{n}{1} + \ldots + \binom{n}{n} = 2^n. \]
+Remember, a combinatorial proof is one in which you ask a counting question, answer it in two different ways, and then conclude that the two answers must be the same. I have provided some structure hints.
+
+Consider the counting question: \hrulefill
+
+\vspace{2em}
+
+One way that we can answer this question is:
+
+\vfill
+
+Therefore, one answer to this counting question is 
+\(\displaystyle \binom{n}{0} + \binom{n}{1} + \ldots + \binom{n}{n}\).
+
+\hrulefill
+
+A second way that we can answer this question is:
+\vfill
+
+Therefore, another answer to this same counting question is 
+\(\displaystyle 2^n\).
+
+(Now write your conclusion here!)
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagebreak
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Learning target Q1 and Q3, version 1} % Formulas for sequences
+
+The abandoned field behind your house is home to a large prairie dog colony.  Each week the size of the colony triples, before 4 prairie dogs sadly die.  Let $(a_n)_{n\ge 1}$ be the sequence giving the number of prairie dogs in the colony after the $n$th week (after the tripling followed by the death of 4). After the first week, there are 5 prairie dogs (so $a_1 = 5$).
+\begin{enumerate}[(a)]
+	\item Write down a recurrence relation to describe $a_n$ in terms of $a_{n-1}$.
+
+    Briefly explain why your formula is correct.
+    \vspace{1.5in}
+	\item Give a careful proof by mathematical induction that $a_n = 3^{n} + 2$.
+
+    Base case:
+
+    \vspace{1in}
+
+    Inductive step:
+    \vfill
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagebreak
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Learning target G3 and G4, version 2} % Special graphs; coloring
+
+Consider the graph below.
+
+\begin{tikzpicture}
+  [scale=.8,auto=left,every node/.style={circle, draw}]
+  \node (n6) at (1,10) {6};
+  \node (n4) at (4,8)  {4};
+  \node (n5) at (8,9)  {5};
+  \node (n1) at (11,8) {1};
+  \node (n2) at (9,6)  {2};
+  \node (n3) at (5,5)  {3};
+
+  \foreach \from/\to in {n6/n4,n4/n5,n5/n1,n1/n2,n2/n5,n2/n3,n3/n4}
+    \draw (\from) -- (\to);
+
+\end{tikzpicture}
+
+\textbf{(G3)} Is the graph a tree, complete, bipartite, planar, or have an Euler circuit? Explain. 
+\vfill
+\textbf{(G4)} What is the chromatic number of this graph? Illustrate by providing a proper coloring.
+\vfill
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagebreak
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Learning target Q3, version 2} % Induction
+
+The following is true for all integers $n \geq 1$. Prove it using mathematical induction.
+\[\frac{1}{1 \cdot 2} + \frac{1}{2 \cdot 3} + ... + \frac{1}{n(n+1)}=\frac{n}{n+1}\]
+
+Base case:
+
+\vspace{1in}
+
+Inductive step:
+
+
+\end{document}
